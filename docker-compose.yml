@@ -12,7 +12,7 @@ services:
   api:
     build: ./api
     ports:
-      - "3000:3000"
+      - "4000:4000"
     environment:
       DATABASE_URL: postgres://postgres:my-secret-pw@db:5432/my_database
     depends_on:
