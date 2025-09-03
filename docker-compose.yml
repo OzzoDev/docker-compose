@@ -14,7 +14,7 @@ services:
     ports:
       - "4000:4000"
     environment:
-      DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD}@db:5432/my_database
+      DATABASE_URL: ${DATABASE_URL}
     depends_on:
       - db
 
