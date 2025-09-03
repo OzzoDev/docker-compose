@@ -21,13 +21,19 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "80:80"
+      - "5173:5173"
     depends_on:
       - api
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
   cache:
     image: redis:latest
     ports:
       - "6379:6379"
+  testcontainer:
+    image: alpine:latest
+    command: sleep infinity
 
 volumes:
   db-data:
